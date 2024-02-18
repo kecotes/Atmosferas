@@ -1,4 +1,4 @@
-# Atfmosferas
+ Atfmosferas
 
 Es una aplicación que emplea técnicas de web scraping para recopilar información relativa a los precios de materiales constructivos provenientes de diversos sitios web de proveedores
 
@@ -28,3 +28,7 @@ Es una aplicación que emplea técnicas de web scraping para recopilar informaci
 #### 2. Ejecutar el Proyecto
 
 Abrirlo con un IDE como Intellij, esperar que maven instale las dependiencias de manera automatica y ejecutarlo
+
+## Base de datos
+
+1. Importar atmosferas.sql a tu instancia de mysql
