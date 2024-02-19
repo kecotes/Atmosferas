@@ -44,8 +44,18 @@ spring.jpa.properties.hibernate.format_sql=true
 2. Creamos la clases correspondientes a nuestro proyecto
 3. Escribimos las propiedades de nuestras entidades y usamos lombook 
 
-# Creamos la relación de uno a muchos
+### Creamos la relación de uno a muchos
 
 1. Nos ubicamos en la entidad que tiene el uno y definimos una lista de la entidad que tiene el muchos
 2. Dentro de la entidad que tiene el muchos creamos el atributo
 3. Ejecutamos nuestro programa
+
+### Creamos la inserción de datos automaticos insert.sql
+
+### Creamos los repositorios
+Repositorio es el que permite guardar leer editar buscar por medio de los metodos de CrudRepository
+
+1. Creamos el parquete repository
+2. Creamos una clase Repository para cada entidad
+
+
