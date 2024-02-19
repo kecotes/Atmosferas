@@ -31,6 +31,8 @@ public class User {
     private String type_document;
     @Column(name = "documento")
     private String document;
+    @Column(name = "fecha_nacimiento")
+    private LocalDateTime date_of_birth;
     @Column(name = "country")
     private String pais;
     @Column(name = "departamento")

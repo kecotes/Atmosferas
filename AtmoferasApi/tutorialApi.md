@@ -58,4 +58,11 @@ Repositorio es el que permite guardar leer editar buscar por medio de los metodo
 1. Creamos el parquete repository
 2. Creamos una clase Repository para cada entidad
 
+### Creamos la capa de persistencia
+Utilizaremos el patron de diseño *data access object (DAO)* para acceder a nuestros datos de forma segura
 
+1. Creamos el paquete persistence
+2. Creamos los metodos del crud para cada entidad create find list dentro del archivo IEntityDAO
+3. Creamos el paquete impl
+4. Luego implementamos los metodos de las interfaces anteriores en una carpeta impl/ EntityDAOImpl
+5. 
