@@ -18,6 +18,7 @@ public class User {
     @Id //id_usuario es el id principal
     @GeneratedValue(strategy = GenerationType.IDENTITY) //JPA genra el id unico para la entidad es como un auto_icrement
     private Long id;
+
     @Column(name = "nombre")
     private String name;
     @Column(name = "apellido")
@@ -38,4 +39,8 @@ public class User {
     private String address;
     private LocalDateTime created_at;
     private LocalDateTime update_at;
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario_rol", nullable = false) //nullable false indica que siempre tiene que estar esta relación
+    private UserRol rol;
 }
