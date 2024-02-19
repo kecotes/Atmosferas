@@ -25,6 +25,8 @@ public class User {
     private String lastname;
     @Column(name = "correo")
     private String email;
+    @Column(name = "contrasena")
+    private String password;
     @Column(name = "tipo_documento")
     private String type_document;
     @Column(name = "documento")
