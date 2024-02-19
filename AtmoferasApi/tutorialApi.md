@@ -53,7 +53,8 @@ spring.jpa.properties.hibernate.format_sql=true
 ### Creamos la inserción de datos automaticos insert.sql
 
 ### Creamos los repositorios
-Repositorio es el que permite guardar leer editar buscar por medio de los metodos de CrudRepository
+Repositorio es el que permite guardar leer editar buscar por medio de los metodos de CrudRepository ya son estos metodos
+los que hacen directamente las consultas a la bd
 
 1. Creamos el parquete repository
 2. Creamos una clase Repository para cada entidad
@@ -64,5 +65,6 @@ Utilizaremos el patron de diseño *data access object (DAO)* para acceder a nues
 1. Creamos el paquete persistence
 2. Creamos los metodos del crud para cada entidad create find list dentro del archivo IEntityDAO
 3. Creamos el paquete impl
-4. Luego implementamos los metodos de las interfaces anteriores en una carpeta impl/ EntityDAOImpl
-5. 
+4. Luego vamos a implementar los metodos de las interfaces anteriores en una carpeta impl/ EntityDAOImpl
+5. A la clase implementaradora la extendemos de la interfaz y el IDE nos ayudara a escribir todos los metodos de la inferfaz
+6. 
