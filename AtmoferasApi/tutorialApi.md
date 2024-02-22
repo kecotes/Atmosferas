@@ -78,3 +78,17 @@ La capa de servicio solo se encarga de toda la logíca de negocio. Esto es excen
 3. Creamos el paquete impl
 4. Creamos las implementaciones UserRolServiceImpl y UserServiceImpl
 5. Intellij nos creará las implementaciones automaticamente
+6. Implementamos los metodos
+
+### Creamos los controladores
+
+1. Paquete controllers
+2. Añadimos las clases al paquete - EntityController
+3. Añadimos las anotaciones RestController y ResquestMapping que permite que la clase sea asociada a una ruta
+
+> En la capa de servicios cuando implementamos un metodo es donde se ubica la logica, por ejemplo en vez de traer un solo id, tambien
+> queremos que ese id sea calculado con otro numero o se genere un codigo cualquiera, cuando querramos cualquier logica va en la capa Servcios
+> Los servicios se encargan de toda la logíca y luego estos servicios invocan a la capa de persistencia encargada de las operaciones con bases de datos
+
+
+
