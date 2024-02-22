@@ -12,16 +12,10 @@
 3. Levantar app, ahora falta configurar la bd...
 
 ### Configurar base de datos
+
  1. Ingresamos a /resources/applications.properties
 
-`##Configuración de la base de datos
-spring.datasource.url=jdbc:mysql://localhost:3306/db_atmosferas
-spring.datasource.username=root
-spring.datasource.password=taraidb
-
-### Configuración de la base de datos
-
-`
+``` 
 ##Configuración de la base de datos
 spring.datasource.url=jdbc:mysql://localhost:3306/db_atmosferas
 spring.datasource.username=root
@@ -36,7 +30,8 @@ spring.jpa.hibernate.ddl-auto=create
 #Con estas sentencias mostramos en consola los resultados de las consultas de la base de datos
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
-`
+``` 
+2. Project Structure > Modules > Dependencies > + 
 
 ### Crearemos las entidades
 
@@ -67,4 +62,3 @@ Utilizaremos el patron de diseño *data access object (DAO)* para acceder a nues
 3. Creamos el paquete impl
 4. Luego vamos a implementar los metodos de las interfaces anteriores en una carpeta impl/ EntityDAOImpl
 5. A la clase implementaradora la extendemos de la interfaz y el IDE nos ayudara a escribir todos los metodos de la inferfaz
-6. 
