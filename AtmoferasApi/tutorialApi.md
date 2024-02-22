@@ -67,4 +67,14 @@ Utilizaremos el patron de diseño *data access object (DAO)* para acceder a nues
 En el repositorio podemos crear nuestro metodo personalizado, podemos hacerlo utilizando la **notación query** y usando **query methods**
 En el repositorio User está claro el ejemplo
 
+### Creamos nuestros Service
 
+1. Creamos el paquete service/IUserRolService
+2. Los mismos metodos de mi persistencia DAO los copio en el los service 
+
+Se copian los mismos metodos ya que estamos elaborando una arquictectura desacoplada, la capa de persistencia solo se encarga de conectarse con la base de datos.
+La capa de servicio solo se encarga de toda la logíca de negocio. Esto es excenlente ya que permite que el proyecto crezca a futuro
+
+3. Creamos el paquete impl
+4. Creamos las implementaciones UserRolServiceImpl y UserServiceImpl
+5. Intellij nos creará las implementaciones automaticamente
