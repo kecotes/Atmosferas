@@ -62,3 +62,9 @@ Utilizaremos el patron de diseño *data access object (DAO)* para acceder a nues
 3. Creamos el paquete impl
 4. Luego vamos a implementar los metodos de las interfaces anteriores en una carpeta impl/ EntityDAOImpl
 5. A la clase implementaradora la extendemos de la interfaz y el IDE nos ayudara a escribir todos los metodos de la inferfaz
+
+### Configuramos una consulta personalizada en el Repository
+En el repositorio podemos crear nuestro metodo personalizado, podemos hacerlo utilizando la **notación query** y usando **query methods**
+En el repositorio User está claro el ejemplo
+
+

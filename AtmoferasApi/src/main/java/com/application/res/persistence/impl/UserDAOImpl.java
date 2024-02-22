@@ -28,7 +28,8 @@ public class UserDAOImpl implements IUserDAO {
 
     @Override
     public List<User> findByBirthdayInRange(LocalDateTime firstDate, LocalDateTime secondDate) {
-        return null;
+
+        return userRepository.findUserByDate_of_birthBetween(firstDate,secondDate);
     }
 
     @Override
