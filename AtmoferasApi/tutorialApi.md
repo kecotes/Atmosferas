@@ -91,4 +91,9 @@ La capa de servicio solo se encarga de toda la logíca de negocio. Esto es excen
 > Los servicios se encargan de toda la logíca y luego estos servicios invocan a la capa de persistencia encargada de las operaciones con bases de datos
 
 
+Para poder usar el metodo que busca un usuario por id solo es inyectar el service pero el metodo no puede devolver la entidad
+por lo que se utiliza un patron de diseño considerado como una buena practica llamado **Data Object Transfer (DTO)**
 
+
+4. Dentro del DTO copiamos practicamente los mismos atributos de la entidad quitando las anotaciones lombook
+Basicamente ese objecto nuevo DTO es el que nuestro controller va a retornar, y así no retornamos una Entity
