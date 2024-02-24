@@ -105,6 +105,7 @@ public class UserRolController {
         if(userRolOptional.isPresent()){ // Si el UserRol existe
             UserRol userRol = userRolOptional.get(); // Recuperamos el entity userRol
             userRol.setType_rol(userRolDTO.getType_rol()); // Setteamos el nombre, se lo cambiamos
+            userRol.setActive(userRolDTO.getActive()); // Setteamos active, se lo cambiamos
             userRolService.save(userRol); // Luego lo volvemos a guardar
             return ResponseEntity.ok("Registo actualizado");
         }
