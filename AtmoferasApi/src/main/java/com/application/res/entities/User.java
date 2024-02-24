@@ -6,6 +6,8 @@ import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Setter
 @Getter
@@ -49,4 +51,8 @@ public class User {
     @JoinColumn(name = "id_usuario_rol", nullable = false) //nullable false indica que siempre tiene que estar esta relación
     @JsonIgnore
     private UserRol rol;
+
+    @OneToMany(mappedBy = "id_user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JsonIgnore
+    private List<UserHasProduct> userHasProductList = new ArrayList<>();
 }

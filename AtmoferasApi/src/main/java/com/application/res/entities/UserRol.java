@@ -30,7 +30,7 @@ public class UserRol {
      * Vamos a mapear el atributo idserol
      * fetch hace que no se sobrecargue el listado cuando haya un userRol, solamente se van a añadir datos a la
      * lista cuando se necesite
-     * orphanRemoval hace que cuando se elimine el UserRol tambien se eliminen todos sus usuarios. Un user no puede
+     * orphanRemoval hace que cuando se elimine el UserRol también se eliminen todos sus usuarios. Un user no puede
      * existir si no existe una categoria de el
      * Con @JsonIgnore permitimos que los datos sean serializados o agregados al userList
      ***/
