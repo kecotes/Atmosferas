@@ -17,16 +17,16 @@ public interface UserRepository extends CrudRepository<User, Long> {
      * Query Methods
      * Buscar en User por date_of_birth entre las fechas
      */
-    List<User> findUserByDate_of_birthBetween(LocalDateTime dateFirst, LocalDateTime dateLast);
+    //List<User> findUsersByDate_of_birthBetween(LocalDateTime dateFirst, LocalDateTime dateLast);
 
 
     /**
      * Notación Query
      * La notación query utiliza un lenguaje muy parecido a SQL pero no es SQL
      * De hecho se llama jpqe un lenguaje propio de JPA
-     * ?1 hace referencia al primer parametro y ?2 al segundo
-     * Utilizando el operador >= y <= decimos que está entre estos dos parametros tambien sirve
-     * Para valores numericos y tambien se puede hacer con between
+     * ?1 hace referencia al primer parámetro y ?2 al segundo
+     * Utilizando el operador >= y <= decimos que está entre estos dos parámetros también sirve
+     * Para valores numéricos y también se puede hacer con between
      *
      *  @Query("SELECT u FROM User u WHERE u.date_of_birth >= ?1 AND u.date_of_birth <= ?2")
      */

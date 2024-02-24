@@ -1,5 +1,6 @@
 package com.application.res.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -31,7 +32,9 @@ public class UserRol {
      * lista cuando se necesite
      * orphanRemoval hace que cuando se elimine el UserRol tambien se eliminen todos sus usuarios. Un user no puede
      * existir si no existe una categoria de el
+     * Con @JsonIgnore permitimos que los datos sean serializados o agregados al userList
      ***/
     @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JsonIgnore
     private List<User> userList = new ArrayList<>();
 }

@@ -1,5 +1,6 @@
 package com.application.res.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -46,5 +47,6 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "id_usuario_rol", nullable = false) //nullable false indica que siempre tiene que estar esta relación
+    @JsonIgnore
     private UserRol rol;
 }

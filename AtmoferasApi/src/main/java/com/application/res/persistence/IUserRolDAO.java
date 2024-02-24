@@ -1,6 +1,5 @@
 package com.application.res.persistence;
 
-import com.application.res.entities.User;
 import com.application.res.entities.UserRol;
 
 import java.util.List;

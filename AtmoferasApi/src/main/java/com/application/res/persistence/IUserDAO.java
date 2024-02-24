@@ -1,7 +1,6 @@
 package com.application.res.persistence;
 
 import com.application.res.entities.User;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -13,7 +12,7 @@ public interface IUserDAO {
 
     Optional<User> findById(Long id);
 
-    List<User> findByBirthdayInRange(LocalDateTime firstDate, LocalDateTime secondDate);
+    //List<User> findByBirthdayInRange(LocalDateTime firstDate, LocalDateTime secondDate);
 
     void save(User user);
 

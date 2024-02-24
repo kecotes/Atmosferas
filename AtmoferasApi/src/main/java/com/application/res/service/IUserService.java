@@ -11,7 +11,7 @@ public interface IUserService {
 
     Optional<User> findById(Long id);
 
-    List<User> findByBirthdayInRange(LocalDateTime firstDate, LocalDateTime secondDate);
+    //List<User> findByBirthdayInRange(LocalDateTime firstDate, LocalDateTime secondDate);
 
     void save(User user);
 

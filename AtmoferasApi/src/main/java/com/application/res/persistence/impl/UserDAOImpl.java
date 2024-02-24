@@ -13,6 +13,7 @@ import java.util.Optional;
 @Component
 public class UserDAOImpl implements IUserDAO {
 
+    //Inyectamos el repositorio
     @Autowired
     private UserRepository userRepository;
 
@@ -26,11 +27,13 @@ public class UserDAOImpl implements IUserDAO {
         return userRepository.findById(id);
     }
 
+    /*
     @Override
     public List<User> findByBirthdayInRange(LocalDateTime firstDate, LocalDateTime secondDate) {
 
-        return userRepository.findUserByDate_of_birthBetween(firstDate,secondDate);
+        return userRepository.findUsersByDate_of_birthBetween(firstDate,secondDate);
     }
+    */
 
     @Override
     public void save(User user) {

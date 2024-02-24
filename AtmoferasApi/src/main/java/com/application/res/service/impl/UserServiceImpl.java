@@ -27,10 +27,12 @@ public class UserServiceImpl implements IUserService {
         return userDAO.findById(id);
     }
 
+    /*
     @Override
     public List<User> findByBirthdayInRange(LocalDateTime firstDate, LocalDateTime secondDate) {
         return userDAO.findByBirthdayInRange(firstDate, secondDate);
     }
+     */
 
     @Override
     public void save(User user) {
