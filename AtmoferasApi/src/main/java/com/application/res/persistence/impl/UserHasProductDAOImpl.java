@@ -28,7 +28,7 @@ public class UserHasProductDAOImpl implements IUserHasProductDAO {
 
     @Override
     public void save(UserHasProduct userHasProduct) {
-        userHasProductRepository.save(userHasProduct)
+        userHasProductRepository.save(userHasProduct);
     }
 
     @Override
