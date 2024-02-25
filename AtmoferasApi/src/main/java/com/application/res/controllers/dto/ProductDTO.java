@@ -22,5 +22,6 @@ public class ProductDTO {
     private BigDecimal price;
     private String image;
     private LocalDateTime created_at;
-    private UserHasProduct productHasUsertList;
+    private LocalDateTime updated_at;
+    private List<UserHasProduct> productHasUsertList = new ArrayList<>();
 }

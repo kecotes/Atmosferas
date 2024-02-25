@@ -71,6 +71,7 @@ public class UserController {
                         .created_at(user.getCreated_at())
                         .update_at(user.getUpdate_at())
                         .rol(user.getRol())
+                        .userHasProductList(user.getUserHasProductList())
                         .build())
                 .toList();
         return ResponseEntity.ok(userDTOList);

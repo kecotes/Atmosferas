@@ -15,10 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class UserRolDTO {
-
     private Long id;
     private String type_rol;
     private Integer active;
-
     private List<User> userList = new ArrayList<>();
 }
