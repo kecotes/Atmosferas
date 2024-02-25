@@ -2,7 +2,6 @@ package com.application.res.persistence;
 
 import com.application.res.entities.User;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 

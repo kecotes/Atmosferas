@@ -17,6 +17,6 @@ public class UserHasProductDTO {
 
     private Long id;
     private LocalDateTime created_at;
-    private User id_user;
-    private Product id_product;
+    private User user;
+    private Product product;
 }
