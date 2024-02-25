@@ -1,5 +1,6 @@
 package com.application.res.controllers;
 
+import com.application.res.controllers.dto.CompareDTO;
 import com.application.res.controllers.dto.ProductDTO;
 import com.application.res.controllers.dto.UserDTO;
 import com.application.res.entities.Product;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -64,27 +66,24 @@ public class ProductController {
     }
 
 
-    /*@PostMapping("/save")
-    public ResponseEntity<?> save(@RequestBody ProductDTO productDTO) throws URISyntaxException {
+    @PostMapping("/compare")
+    public ResponseEntity<?> findProductByPriceBetween(@RequestBody CompareDTO compareDTO){
+        List<ProductDTO> productDTOList = productService.findProductByPriceBetween(compareDTO.getMinPrice(), compareDTO.getMaxPrice())
+                .stream()
+                .map(product -> ProductDTO.builder()
+                        .id(product.getId())
+                        .name(product.getName())
+                        .description(product.getDescription())
+                        .price(product.getPrice())
+                        .image(product.getImage())
+                        .created_at(product.getCreated_at())
+                        .updated_at(product.getUpdated_at())
+                        .productHasUsertList(product.getProductHasUsertList())
+                        .build())
+                .toList();
 
-        if(productDTO.getName().isBlank() || productDTO.getPrice() == null || productDTO.getDescription().isBlank() ){
-            return ResponseEntity.badRequest().build();
-        }
-
-        Product product = Product.builder()
-                .id(productDTO.getId())
-                .name(productDTO.getName())
-                .description(productDTO.getDescription())
-                .price(productDTO.getPrice())
-                .image(productDTO.getImage())
-                .created_at(productDTO.getCreated_at())
-                .build();
-
-        productService.save(product);
-
-        return ResponseEntity.created(new URI("/api/product/save")).build();
-
-    }*/
+        return ResponseEntity.ok(productDTOList);
+    }
 
     @PostMapping("/save")
     public ResponseEntity<?> save(@RequestBody ProductDTO productDTO) throws URISyntaxException {
