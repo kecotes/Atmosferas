@@ -89,7 +89,8 @@ public class ProductController {
     @PostMapping("/save")
     public ResponseEntity<?> save(@RequestBody ProductDTO productDTO) throws URISyntaxException {
 
-        if(productDTO.getName().isBlank() || productDTO.getDescription().isBlank() ){
+        if(productDTO.getName() == "" || productDTO.getDescription() == "" ){
+            System.out.println("Esta entrando aqui");
             return ResponseEntity.badRequest().build();
         }
 
