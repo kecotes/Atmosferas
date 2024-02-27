@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mi Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="formPerfil" (ngSubmit)="guardar()">
+    <ion-input
+      label="Nombre"
+      formControlName="nombre"
+      label-placement="stacked"
+      fill="outline"
+      type="text"
+      class="ion-margin-bottom"
+    ></ion-input>
+    <ion-input
+      label="Apellidos"
+      formControlName="apellido"
+      label-placement="stacked"
+      fill="outline"
+      type="text"
+      class="ion-margin-bottom"
+    ></ion-input>
+    <ion-input
+      label="Correo Electrónico"
+      formControlName="email"
+      label-placement="stacked"
+      fill="outline"
+      type="text"
+      class="ion-margin-bottom"
+    ></ion-input>
+    <ion-input
+      label="Tipo de Documento"
+      formControlName="tipoDocumento"
+      label-placement="stacked"
+      fill="outline"
+      type="text"
+      class="ion-margin-bottom"
+    ></ion-input>
+    <ion-input
+      label="Número de Documento"
+      formControlName="documento"
+      label-placement="stacked"
+      fill="outline"
+      type="text"
+      class="ion-margin-bottom"
+    ></ion-input>
+    <ion-input
+      label="Pais"
+      formControlName="pais"
+      label-placement="stacked"
+      fill="outline"
+      type="text"
+      class="ion-margin-bottom"
+    ></ion-input>
+    <ion-input
+      label="Departamento"
+      formControlName="departamento"
+      label-placement="stacked"
+      fill="outline"
+      type="text"
+      class="ion-margin-bottom"
+    ></ion-input>
+    <ion-input
+      label="Ciudad"
+      formControlName="ciudad"
+      label-placement="stacked"
+      fill="outline"
+      type="text"
+      class="ion-margin-bottom"
+    ></ion-input>
+    <ion-input
+      label="Dirección"
+      formControlName="direccion"
+      label-placement="stacked"
+      fill="outline"
+      type="text"
+      class="ion-margin-bottom"
+    ></ion-input>
+    <ion-button
+      expand="block"
+      color="primary"
+      type="submit"
+      [disabled]="formPerfil.invalid"
+      >Guardar</ion-button
+    >
+  </form>
+</ion-content>

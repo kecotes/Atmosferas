@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="producto">
+    <ion-text>
+      <h1 class="ion-text-cener">{{producto.name}}</h1>
+    </ion-text>
+    <img alt="" src="{{producto.image}}" />
+    <ion-text>
+      <p>{{producto.description}}</p>
+    </ion-text>
+    <ion-list>
+      <ion-list-header><ion-label>Precio</ion-label></ion-list-header>
+      <ion-item>
+        <ion-label>
+          {{producto.price | currency}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

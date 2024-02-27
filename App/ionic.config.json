@@ -1,0 +1,7 @@
+{
+  "name": "atmosferas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
